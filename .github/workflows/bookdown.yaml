@@ -44,14 +44,27 @@ jobs:
       - name: Build site
         run: Rscript -e 'bookdown::render_book("index.Rmd", quiet = TRUE)'
 
-      - name: Install npm
-        uses: actions/setup-node@v1
+      - uses: actions/upload-artifact@v1
+        with:
+          name: _book
+          path: _book/
 
-      - name: Deploy to Netlify
-        # NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID added in the repo's secrets
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        run: |
-          npm install netlify-cli -g
-          netlify deploy --prod --dir _book
+  deploy:
+   runs-on: ubuntu-latest
+   needs: build
+   steps:
+     - name: Checkout 🛎️
+       uses: actions/checkout@v2.3.1
+     - name: Download artifact 🔻 # The built project is downloaded into the '_book' folder.
+       uses: actions/download-artifact@v1.0.0
+       with:
+         # Artifact name
+         name: _book # optional
+         # Destination path
+         path: _book # optional
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: '_book'
