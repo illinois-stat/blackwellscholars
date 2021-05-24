@@ -1,0 +1,47 @@
+--- 
+title: "Blackwell Summer Scholars Program"
+subtitle: "Summer 2021"
+author: "Blackwell Summer Scholars Staff @ IIllinois"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: ["book.bib"]
+biblio-style: apalike
+link-citations: yes
+links-as-notes: true
+colorlinks: true
+cover-image: "illinois-wordmark-vertical.png"
+github-repo: "uiucstats/blackwellscholars"
+description: "Utility website for the Blackwell Summer Scholars"
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+opts_chunk$set(message = FALSE, warning = FALSE, cache = TRUE)
+options(width = 100, dplyr.width = 100)
+```
+
+# Welcome {-}
+
+Welcome to the inaugural [Blackwell Summer Scholars 2021 Program](https://stat.illinois.edu/alumni/david-blackwell/blackwell-summer-scholars-program)
+hosted by
+the [Department of Statistics](https://stat.illinois.edu) and [Department of Mathematics](https://math.illinois.edu) at the
+[University of Illinois at Urbana-Champaign](https://illinois.edu).
+
+The **David H. Blackwell Summer Scholars Program** is designed to increase the access and equity in the pipeline for graduate degrees in statistics, data science, and mathematics. The **David H. Blackwell Summer Scholars Program** will offer research experiences during the summer to 8-12 students. Students from historically marginalized minority populations in the United States, which includes African Americans, Hispanic/Latinos, American Indian/Alaska Natives, are especially encouraged to apply. The goal of the project is advance the scholars’ knowledge of statistics and mathematics to prepare them for success in statistics or mathematics graduate programs. **The Department of Statistics and the Department of Mathematics at the University of Illinois** are well poised and dedicated to fulfill programmatic efforts that are exemplary of Professor Blackwell’s name. 
+
+## Colophon
+
+This website was built using `r R.version.string` and the following packages:
+
+```{r, echo = FALSE, results="asis"}
+pkgs <- sessioninfo::package_info(pkgs, dependencies = FALSE)
+df <- tibble(
+  package = pkgs$package,
+  version = pkgs$ondiskversion,
+  source = gsub("@", "\\\\@", pkgs$source)
+)
+knitr::kable(df, format = "markdown")
+```
+

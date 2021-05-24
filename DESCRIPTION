@@ -1,0 +1,33 @@
+Package: blackwellscholars
+Title: R packages used to build the blackwellscholars website
+Version: 1.0.0
+Authors@R: 
+    person(given = "First",
+           family = "Last",
+           role = c("aut", "cre"),
+           email = "first.last@example.com")
+URL: https://github.com/uiucstats/blackwellscholars
+Depends: 
+    R (>= 4.0.0)
+Imports:
+    tidyverse,
+    rmarkdown,
+    knitr,
+    glue,
+    devtools,
+    sf,
+    gameofthrones,
+    babynames,
+    ggforce,
+    ggraph,
+    ggrepel,
+    ggtext,
+    ggthemes
+Suggests:
+    bookdown,
+    bslib,
+    desc,
+    downlit,
+    jsonlite,
+    sessioninfo
+Encoding: UTF-8

@@ -1,0 +1,35 @@
+bookdown::bs4_book:
+  theme:
+    primary: "#13294b"
+    secondary: "#E84A27" # where is this showing up? it's not! No orange.
+    fg: "#5E5E5E"
+    bg: "#FFFFFF"
+    # link
+    #link-color: "#167AD0"
+  repo: "https://github.com/uiucstats/blackwellscholars"
+  includes:
+    in_header: [ga-analytics.html]
+
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      collapse: section
+      scroll_highlight: yes
+      before: |
+        <li><a href="./">Blackwell Scholars Program</a></li>
+      after: |
+        <li><a href="https://github.com/uiucstats/blackwellscholars" target="blank">Built with bookdown</a></li>
+    edit: https://github.com/uiucstats/blackwellscholars
+    download: ["pdf", "epub"]
+  includes:
+    in_header: [ga-analytics.html]
+
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+
+bookdown::epub_book: default

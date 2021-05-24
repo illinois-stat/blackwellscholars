@@ -1,0 +1,64 @@
+# Setting up a Research Environment {-}
+
+Before starting on our research journey, let's make sure all of the required
+software is present. This week, we will introduce different technologies that
+require the following software to be present. 
+
+**Note:** Each research project may require additional software than what is
+listed here. 
+
+In particular, please make sure to download and install: 
+
+-   **R**: R is a free software environment for statistical computing and graphics.
+    Please make sure to run the latest version [**R version 4.1.0 (Camp Pontanezen)**](https://cloud.r-project.org/)
+    released on **2021-05-18**.
+    
+| Title         | Video Link      | Download Link   |
+| ------------- | -------------   | ---------------|
+| Windows: Downloading R  | [YouTube]() | [Software](https://cloud.r-project.org/bin/windows/base/) |
+| macOS: Downloading R    | [YouTube]() | [Software](https://cloud.r-project.org/bin/macosx/) |
+
+
+-   **RStudio**: RStudio is a free and open source integrated development environment (IDE) for R.
+    There are other options to use for writing R code such as
+    [Visual Studio Code](https://code.visualstudio.com/) (with [R Support](https://marketplace.visualstudio.com/items?itemName=Ikuyadeu.r)),
+    R GUI, 
+    [GNU Emacs](https://www.gnu.org/software/emacs/) (with [Emacs Speaks Statistics](https://ess.r-project.org/)), or even a plain text editor.
+    We've opted to RStudio since it is a feature-rich program for writing R code
+    and, perhaps more importantly, used heavily in both academia and industry.
+    In particular, we'll be using **RStudio Desktop** 1.4.1106. 
+    
+| Title         | Video Link      | Download Link   |
+| ------------- | -------------   | ---------------|
+| Windows: Downloading RStudio  | [YouTube](https://www.youtube.com/watch?v=Zq8oxC2Rq2Q) | [Software](https://www.rstudio.com/products/rstudio/download/#download) |
+| macOS:   Downloading RStudio  | [YouTube]() | [Software](https://www.rstudio.com/products/rstudio/download/#download) |
+
+-   **R packages**: R Packages are an extension to the R language that
+    provide additional features. We'll be using quite a few to tackle different
+    research problems. You can install the core set of packages by opening
+    RStudio and typing -- or copying and pasting -- into the console:
+
+    ```{r, echo = FALSE, cache = FALSE}
+    description_pkgs = desc::desc_get_deps()
+    ordered_pkgnames = sort(description_pkgs$package[description_pkgs$type == "Imports"])
+    wrapped_pkgnames = strwrap(paste(encodeString(ordered_pkgnames, quote = '"'), collapse = ", "), exdent = 1)
+    install_command = paste0(
+      "install.packages(c(\n ", 
+      paste(wrapped_pkgnames, "\n", collapse = ""), 
+      "))"
+    )
+    ```
+
+    ```{r code = install_command, eval = FALSE}
+    ```
+
+
+-   **Compiler Toolchain** (optional): Compiler Toolchains provide the opportunity
+    to construct R packages from source code and translate code into a low-level machine language called assembly.
+    
+| Title         | Video Link      | Download Link   |
+| ------------- | -------------   | ---------------|
+| Windows: Downloading Rtools  | [YouTube](https://www.youtube.com/watch?v=njZBf34Akgo) | [Software](https://cran.r-project.org/bin/windows/Rtools/) |
+| macOS: Install Xcode CLI    | [YouTube](https://www.youtube.com/watch?v=Z01lzHNrSdU) | - |
+| macOS: Install gfortran 8.2    | - | [`gfortran8.2`](https://github.com/fxcoudert/gfortran-for-macOS/releases/download/8.2/gfortran-8.2-Mojave.dmg) |
+
