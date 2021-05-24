@@ -49,7 +49,7 @@ jobs:
       - name: Build site
         run: Rscript -e 'bookdown::render_book("index.Rmd", quiet = TRUE)'
 
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v2
         with:
           name: _book
           path: _book
@@ -61,7 +61,7 @@ jobs:
      - name: Checkout 🛎️
        uses: actions/checkout@v2.3.1
      - name: Download artifact 🔻 # The built project is downloaded into the '_book' folder.
-       uses: actions/upload-artifact@v2
+       uses: actions/download-artifact@v2
        with:
          # Artifact name
          name: _book # optional
