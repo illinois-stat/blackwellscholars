@@ -37,3 +37,22 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Prevent any artifacts from the book process from being incorporated
+*.html
+*.pdf
+
+# Disable cache and book directories
+_cache
+_figures
+_book/
+_bookdown_files/
+
+# Disable side-effects
+_main.rds
+_main.adx
+_main.log
+_main.aux
+_main.idx
+_main.out
+_main.toc
