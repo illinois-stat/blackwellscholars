@@ -17,8 +17,8 @@ In particular, please make sure to download and install:
     
 | Title         | Video Link      | Download Link   |
 | ------------- | -------------   | ---------------|
-| Windows: Downloading R  | [YouTube]() | [Software](https://cloud.r-project.org/bin/windows/base/) |
-| macOS: Downloading R    | [YouTube]() | [Software](https://cloud.r-project.org/bin/macosx/) |
+| Windows: Downloading R  | [YouTube]() | [R for Windows](https://cloud.r-project.org/bin/windows/base/) |
+| macOS: Downloading R    | [YouTube](https://www.youtube.com/watch?v=Vy-lEkJB3cA&list=PL50Yqb_ZFDedxyaDJ4UzcTEfqcMBbroKP&index=1) | [R for macOS](https://cloud.r-project.org/bin/macosx/) |
 
 
 -   **RStudio**: RStudio is a free and open source integrated development environment (IDE) for R.
@@ -33,7 +33,7 @@ In particular, please make sure to download and install:
 | Title         | Video Link      | Download Link   |
 | ------------- | -------------   | ---------------|
 | Windows: Downloading RStudio  | [YouTube](https://www.youtube.com/watch?v=Zq8oxC2Rq2Q) | [Software](https://www.rstudio.com/products/rstudio/download/#download) |
-| macOS:   Downloading RStudio  | [YouTube]() | [Software](https://www.rstudio.com/products/rstudio/download/#download) |
+| macOS:   Downloading RStudio  | [YouTube](https://www.youtube.com/watch?v=LHzyPxhw_mU&list=PL50Yqb_ZFDedxyaDJ4UzcTEfqcMBbroKP&index=2) | [RStudio for macOS](https://www.rstudio.com/products/rstudio/download/#download) |
 
 -   **R packages**: R Packages are an extension to the R language that
     provide additional features. We'll be using quite a few to tackle different
@@ -61,6 +61,6 @@ In particular, please make sure to download and install:
 | Title         | Video Link      | Download Link   |
 | ------------- | -------------   | ---------------|
 | Windows: Downloading Rtools  | [YouTube](https://www.youtube.com/watch?v=njZBf34Akgo) | [Software](https://cran.r-project.org/bin/windows/Rtools/) |
-| macOS: Install Xcode CLI    | [YouTube](https://www.youtube.com/watch?v=Z01lzHNrSdU) | - |
-| macOS: Install gfortran 8.2    | - | [`gfortran8.2`](https://github.com/fxcoudert/gfortran-for-macOS/releases/download/8.2/gfortran-8.2-Mojave.dmg) |
+| macOS: Install Xcode CLI    | [YouTube](https://www.youtube.com/watch?v=Z01lzHNrSdU&list=PL50Yqb_ZFDedxyaDJ4UzcTEfqcMBbroKP&index=3) | - |
+| macOS: Install gfortran 8.2    | [YouTube](https://www.youtube.com/watch?v=piUnVKTUMGw&list=PL50Yqb_ZFDedxyaDJ4UzcTEfqcMBbroKP&index=4) | [`gfortran8.2`](https://github.com/fxcoudert/gfortran-for-macOS/releases/download/8.2/gfortran-8.2-Mojave.dmg) |
 
