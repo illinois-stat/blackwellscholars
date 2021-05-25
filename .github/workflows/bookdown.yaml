@@ -25,26 +25,21 @@ jobs:
       - name: Cache Renv packages
         uses: actions/cache@v2
         with:
-          path: ${{ env.R_LIBS_USER }}
-          key: r-4-${{ hashFiles('DESCRIPTION') }}
-          restore-keys: r-4-
+          path: $HOME/.local/share/renv
+          key: r-${{ hashFiles('renv.lock') }}
+          restore-keys: r-
 
       - name: Cache bookdown results
         uses: actions/cache@v2
         with:
           path: _bookdown_files
-          key: bookdown-4-${{ hashFiles('**/*Rmd') }}
-          restore-keys: bookdown-4-
+          key: bookdown-${{ hashFiles('**/*Rmd') }}
+          restore-keys: bookdown-
 
-      - name: Install pak
+      - name: Install packages
         run: |
-          install.packages("pak", repos = "https://r-lib.github.io/p/pak/dev/")
-        shell: Rscript {0}
-
-      - name: Install dependencies
-        run: |
-          pak::local_install_dev_deps(upgrade = TRUE)
-        shell: Rscript {0}
+          R -e 'install.packages("renv")'
+          R -e 'renv::restore()'
 
       - name: Build site
         run: Rscript -e 'bookdown::render_book("index.Rmd", quiet = TRUE)'
