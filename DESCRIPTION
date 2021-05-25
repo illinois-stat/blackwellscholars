@@ -22,7 +22,8 @@ Imports:
     ggraph,
     ggrepel,
     ggtext,
-    ggthemes
+    ggthemes,
+    RcppArmadillo
 Suggests:
     bookdown,
     bslib,
