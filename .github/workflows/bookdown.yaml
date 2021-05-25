@@ -49,27 +49,8 @@ jobs:
       - name: Build site
         run: Rscript -e 'bookdown::render_book("index.Rmd", quiet = TRUE)'
 
-      - uses: actions/upload-artifact@v2
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          name: _book
-          path: _book
-
-  deploy:
-   runs-on: ubuntu-latest
-   needs: build
-   steps:
-     - name: Checkout 🛎️
-       uses: actions/checkout@v2.3.1
-     - name: Download artifact 🔻 # The built project is downloaded into the '_book' folder.
-       uses: actions/download-artifact@v2
-       with:
-         # Artifact name
-         name: _book # optional
-         # Destination path
-         path: _book # optional
-     - name: Deploy 🚀
-       uses: JamesIves/github-pages-deploy-action@4.1.3
-       with:
-         token: ${{ secrets.GITHUB_TOKEN }}
-         branch: gh-pages
-         folder: _book
+          github_token: ${{ secrets.GITHUB_TOKEN}}
+          publish_dir: ./public
