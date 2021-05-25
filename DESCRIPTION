@@ -25,6 +25,7 @@ Imports:
     ggthemes,
     RcppArmadillo
 Suggests:
+    rversions,
     bookdown,
     bslib,
     desc,
@@ -32,3 +33,5 @@ Suggests:
     jsonlite,
     sessioninfo
 Encoding: UTF-8
+Remotes:
+    r-hub/rversions
