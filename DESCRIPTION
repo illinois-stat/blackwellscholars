@@ -31,7 +31,8 @@ Suggests:
     desc,
     downlit,
     jsonlite,
-    sessioninfo
+    sessioninfo,
+    curl
 Encoding: UTF-8
 Remotes:
     r-hub/rversions
