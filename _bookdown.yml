@@ -6,4 +6,3 @@ delete_merged_file: true
 rmd_files:
 - "index.Rmd"
 - "00-environment-setup.Rmd"
-- "01-r-programming.Rmd"
